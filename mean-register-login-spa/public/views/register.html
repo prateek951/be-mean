@@ -1,0 +1,27 @@
+<div ng-controller="registerCtrl" class="container-fluid">
+   {{main}}
+    <div class="form-group">
+        <label for="userName">Name</label>
+        <input type="text" class="form-control" ng-model="userName" id="userName" placeholder="User Name">
+    </div>
+    <div class="form-group">
+        <label for="contact">Contact No</label>
+        <input type="text" class="form-control" ng-model="contact" id="contact" ng-blur="doContactCheck()" placeholder="Contact No">
+        <span>{{number}}</span>
+    </div>
+    <div class="form-group">
+        <label for="eMail">Email</label>
+        <input type="email" class="form-control" ng-model="eMail" id="eMail" ng-blur="doEmailCheck()" placeholder="Email">
+        <span>{{mail}}</span>
+    </div>
+    <div class="form-group">
+        <label for="pwd">Password</label>
+        <input type="password" class="form-control " ng-model="pwd" name="pwd" id="pwd" placeholder="Password ">
+    </div>
+    <div class="form-group">
+        <label for="cpwd">Confirm Password</label>
+        <input type="password" class="form-control" ng-model="cpwd" name="cpwd" id="cpwd" placeholder="Confirm Password ">
+        <span ng-show="pwd !== cpwd">Password mismatch</span>
+    </div>
+    <button type="submit" ng-click="register()" class="btn btn-primary">Register</button>
+</div>
