@@ -1,0 +1,116 @@
+@import "compass";
+@import "partials/variables";
+@import "partials/normalize";
+.nav-top .navbar-header {
+    text-align: center;
+}
+.nav-search {
+    float: left;
+}
+.nav-search .navbar-form {
+    margin: 15px 0;
+    width: 100%;
+}
+.navbar-form{
+	border:0;
+}
+.navbar-toggle span {
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+.navbar-toggle.active #bar1 {
+    position: relative;
+    top: 6px;
+    -webkit-transform: rotateZ(45deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotateZ(45deg);
+    /* IE 9 */
+    -moz-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+    -webkit-transition: transform 0.5s linear;
+    -moz-transition: transform 0.5s linear;
+    transition: transform 0.5s linear;
+}
+
+.navbar-toggle.active #bar2 {
+    opacity: 0;
+}
+
+.navbar-toggle.active #bar3 {
+    position: relative;
+    top: -6px;
+    -webkit-transform: rotateZ(-45deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotateZ(-45deg);
+    /* IE 9 */
+    -moz-transform: rotateZ(45deg);
+    transform: rotateZ(-45deg);
+    -webkit-transition: transform 0.5s linear;
+    -moz-transition: transform 0.5s linear;
+    transition: transform 0.5s linear;
+}
+.left {
+    position: fixed;
+    right: 250px !important;
+    -webkit-transition: right 0.5s linear;
+    -moz-transition: right 0.5s linear;
+    transition: right 0.5s linear;
+}
+
+.right {
+    position: fixed;
+    right: 0 !important;
+    -webkit-transition: right 0.5s linear;
+    -moz-transition: right 0.5s linear;
+    transition: right 0.5s linear;
+}
+
+.navbar-toggle {
+    position: fixed;
+    right: 0;
+    -webkit-transition: right 0.5s linear;
+    -moz-transition: right 0.5s linear;
+    transition: right 0.5s linear;
+}
+
+@media(min-width:768px){
+	.navbar-brand {
+    width: 100%;
+    font-size: 22px;
+    height: auto;
+    line-height: 26px;
+	}
+	.nav-search .navbar-form {
+    margin: 15px 0;
+    width: 70%;
+    float: left;
+}
+}
+@media(min-width:1024px){
+	.navbar-brand{
+	font-size:32px;
+	line-height: 34px;
+	}
+}
+@media(max-width:767px){
+	.container-fluid{
+	padding:0
+	}
+	.navbar-collapse {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100%;
+        background: #222;
+        -webkit-transition: right 0.5s linear;
+        -moz-transition: right 0.5s linear;
+        transition: right 0.5s linear;
+    }
+    .navbar-inverse .navbar-collapse {
+        border: none;
+    }
+}
