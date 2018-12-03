@@ -1,0 +1,96 @@
+/*body{
+    -webkit-transition: left 0.2s linear;
+    -moz-transition: left 0.2s linear;
+    transition: transform 0.2s linear;
+}*/
+
+.heading {
+    text-align: center;
+    font-family: 'Droid Serif', serif;
+    font-weight: 500;
+}
+
+.navbar-toggle span {
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+.navbar-toggle.active #bar1 {
+    position: relative;
+    top: 6px;
+    -webkit-transform: rotateZ(45deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotateZ(45deg);
+    /* IE 9 */
+    -moz-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+    -webkit-transition: transform 0.5s linear;
+    -moz-transition: transform 0.5s linear;
+    transition: transform 0.5s linear;
+}
+
+.navbar-toggle.active #bar2 {
+    opacity: 0;
+}
+
+.navbar-toggle.active #bar3 {
+    position: relative;
+    top: -6px;
+    -webkit-transform: rotateZ(-45deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotateZ(-45deg);
+    /* IE 9 */
+    -moz-transform: rotateZ(45deg);
+    transform: rotateZ(-45deg);
+    -webkit-transition: transform 0.5s linear;
+    -moz-transition: transform 0.5s linear;
+    transition: transform 0.5s linear;
+}
+
+.left {
+    position: fixed;
+    right: 250px !important;
+    -webkit-transition: right 0.5s linear;
+    -moz-transition: right 0.5s linear;
+    transition: right 0.5s linear;
+}
+
+.right {
+    position: fixed;
+    right: 0 !important;
+    -webkit-transition: right 0.5s linear;
+    -moz-transition: right 0.5s linear;
+    transition: right 0.5s linear;
+}
+
+.navbar-toggle {
+    position: fixed;
+    right: 0;
+    -webkit-transition: right 0.5s linear;
+    -moz-transition: right 0.5s linear;
+    transition: right 0.5s linear;
+}
+
+@media(max-width:767px) {
+    .navbar-collapse {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100%;
+        background: #222;
+        -webkit-transition: right 0.5s linear;
+        -moz-transition: right 0.5s linear;
+        transition: right 0.5s linear;
+    }
+    .navbar-inverse .navbar-collapse {
+        border: none;
+    }
+}
+
+.navbar-inverse .navbar-nav>li>a:focus,
+.navbar-inverse .navbar-nav>li>a:hover {
+    cursor: url(../images/images.jpg), auto;
+}
